@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Política de Privacidade · MEGABOX Financeiro</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+  <a href="index.html">MEGABOX <span>Financeiro</span></a>
+  <nav><a href="index.html">Início</a><a href="privacidade.html">Política de Privacidade</a><a href="termos.html">Termos de Uso</a></nav>
+</header>
+<main>
+  <h1>Política de Privacidade do MEGABOX Financeiro</h1>
+  <p class="data">Vigente desde 04/11/2026.</p>
+
+  <h2>1. Quem é o responsável</h2>
+  <p>O MEGABOX Financeiro é operado pela Megabox Automotivo Ltda., CNPJ 30.799.806/0002-33, que é a controladora dos dados
+     tratados por ele. Contato sobre privacidade: <a href="mailto:megaboxauto.financeiro@gmail.com">megaboxauto.financeiro@gmail.com</a>.</p>
+
+  <h2>2. A quem o sistema se aplica</h2>
+  <p>O sistema é de uso interno. Ele acessa somente a caixa de e-mail financeira da própria empresa
+     (megaboxauto.financeiro@gmail.com), mediante autorização dada pela empresa na tela de consentimento do Google.</p>
+
+  <h2>3. Que dados do Google são acessados</h2>
+  <p>O sistema solicita uma única permissão do Google: <code>https://www.googleapis.com/auth/gmail.readonly</code>
+     (ver mensagens e configurações de e-mail). Com ela, o sistema:</p>
+  <ul>
+    <li>pesquisa mensagens relacionadas a boletos, faturas e cobranças;</li>
+    <li>lê o remetente, o assunto, a data e o texto dessas mensagens;</li>
+    <li>baixa anexos em PDF de mensagens classificadas como cobrança, até 10 MB cada.</li>
+  </ul>
+  <p>O sistema <strong>não</strong> envia, apaga, move, rotula ou altera e-mails. A permissão concedida não
+     permite essas ações.</p>
+
+  <h2>4. Como os dados são usados</h2>
+  <ul>
+    <li>Extrair de cada cobrança, quando presentes: fornecedor, CNPJ do beneficiário, valor, vencimento,
+        data de emissão, número do documento e linha digitável ou código de barras.</li>
+    <li>Classificar mensagens (cobrança pendente, fatura, cobrança vencida, comprovante de pagamento, etc.).</li>
+    <li>Sinalizar duplicidades e inconsistências.</li>
+    <li>Apresentar as cobranças para revisão humana num painel local.</li>
+  </ul>
+  <p>Os dados são usados apenas para essas funções de gestão financeira da própria empresa.</p>
+
+  <h2>5. Dados de saúde e outros dados sensíveis</h2>
+  <p>Mensagens que pareçam tratar de saúde ocupacional (por exemplo ASO, exames ou atestados) são
+     identificadas pelo assunto, pelo remetente ou pelo nome do anexo e descartadas
+     <strong>antes</strong> de o corpo ser lido ou o anexo ser baixado. Delas o sistema guarda somente o
+     identificador da mensagem, a data e o motivo do descarte.</p>
+
+  <h2>6. Onde os dados ficam</h2>
+  <ul>
+    <li>Os dados extraídos e os PDFs baixados ficam num banco de dados SQLite e numa pasta no computador da
+        empresa onde o sistema roda. Não há servidor próprio na internet guardando esses dados.</li>
+    <li>O painel de revisão funciona apenas nesse computador (endereço local 127.0.0.1) e não fica
+        acessível pela rede.</li>
+    <li>A credencial de acesso ao Google fica nesse mesmo computador e não é compartilhada.</li>
+  </ul>
+
+  <h2>7. Processamento por inteligência artificial</h2>
+  <p>A empresa pode usar um assistente de inteligência artificial (Claude, da Anthropic) para operar e
+     analisar o sistema. Quando isso acontece, <strong>o conteúdo de e-mails, o texto extraído de PDFs e
+     dados de cobranças podem ser enviados aos servidores da Anthropic</strong> para processamento. Esse
+     envio é feito pela própria empresa, para a função de gestão financeira descrita acima. O assistente é
+     configurado para não ler diretamente as credenciais, o banco de dados nem os arquivos PDF guardados.</p>
+  <p>A empresa <strong>não usa</strong> os dados obtidos pelas APIs do Google para criar, treinar ou
+     melhorar modelos de inteligência artificial. A empresa usa uma conta comercial do Claude (plano
+     Team), cujos termos preveem, por padrão, que o conteúdo enviado não é usado pela Anthropic para
+     treinar seus modelos.</p>
+
+  <h2>8. Compartilhamento</h2>
+  <p>A empresa não vende, aluga nem transfere esses dados a terceiros, inclusive plataformas de
+     publicidade e corretores de dados. A única transferência é a descrita no item 7.</p>
+
+  <h2>9. Retenção e exclusão</h2>
+  <p>Os dados das cobranças e os PDFs baixados são guardados por <strong>5 anos</strong>, contados do
+     vencimento da cobrança (ou, se não houver vencimento, da data em que o sistema a identificou), prazo
+     adotado por razões fiscais. Depois desse prazo, ou antes, a pedido feito ao contato do item 1, a
+     empresa executa a exclusão.</p>
+  <p>Um pedido de exclusão não alcança, antes dos 5 anos, cobranças que a empresa já reconheceu como
+     conta a pagar ou cujo pagamento foi registrado, pois elas precisam ser conservadas para cumprir
+     obrigações legais, fiscais e contábeis. Nesses casos a exclusão ocorre quando o prazo terminar.</p>
+  <p>A exclusão apaga os PDFs e os dados identificáveis da cobrança, da mensagem de origem e dos
+     comprovantes relacionados (fornecedor, CNPJ, linha digitável, código de barras, remetente, assunto e
+     descrições) e substitui o identificador da mensagem por um código interno. Ficam apenas o valor, o
+     vencimento e a situação da cobrança, sem identificação direta, para manter os totais e o controle
+     financeiro. O registro de auditoria guarda somente que a exclusão ocorreu, quando e por qual motivo.
+     Uma mensagem excluída não volta a ser registrada se a caixa de e-mail for lida novamente.</p>
+  <p>A exclusão não é automática: é feita pela empresa, por um procedimento do próprio sistema, quando
+     o prazo vence ou quando há um pedido. Cópias de segurança do computador feitas fora do sistema não são
+     alcançadas por esse procedimento.</p>
+
+  <h2>10. Segurança</h2>
+  <ul>
+    <li>Permissão do Google somente leitura, verificada pelo sistema a cada uso.</li>
+    <li>Painel acessível só no próprio computador, com token de acesso e proteção contra requisições
+        forjadas.</li>
+    <li>Credenciais e dados fora de qualquer repositório de código.</li>
+    <li>Registro de auditoria das operações e das alterações feitas por pessoas.</li>
+  </ul>
+
+  <h2>11. Como revogar o acesso</h2>
+  <p>O acesso pode ser revogado a qualquer momento em
+     <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, removendo
+     "MEGABOX Financeiro". Depois disso o sistema não consegue mais ler a caixa de e-mail.</p>
+
+  <h2>12. Política de dados de usuário do Google</h2>
+  <p>O uso e a transferência de informações recebidas das APIs do Google seguem a
+     <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário
+     dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+
+  <h2>13. Direitos do titular (LGPD)</h2>
+  <p>Pessoas cujos dados apareçam nas mensagens podem solicitar informações, correção ou exclusão pelo
+     contato do item 1, nos termos da Lei nº 13.709/2018.</p>
+
+  <h2>14. Alterações</h2>
+  <p>Esta política pode ser atualizada. A data de vigência no topo indica a versão atual.</p>
+</main>
+<footer>© 2026 Megabox Automotivo Ltda.</footer>
+</body>
+</html>
